@@ -53,7 +53,7 @@ class Parser:
         return result.failure(error)
 
     def term(self):
-        return self.make_binary_operation(self.factor, (TOKEN_TYPE_MULTIPLY, TOKEN_TYPE_DIVIDE))
+        return self.make_binary_operation(self.factor, (TOKEN_TYPE_MULTIPLY, TOKEN_TYPE_DIVIDE, TOKEN_TYPE_POWER))
                
     def expression(self):
         return self.make_binary_operation(self.term, (TOKEN_TYPE_PLUS, TOKEN_TYPE_MINUS))

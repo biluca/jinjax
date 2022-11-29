@@ -41,6 +41,8 @@ class Interpreter:
             result, error = left_node.multiply_by(right_node)
         if operator_token.type == TOKEN_TYPE_DIVIDE:
             result, error = left_node.divide_by(right_node)
+        if operator_token.type == TOKEN_TYPE_POWER:
+            result, error = left_node.power_by(right_node)
         
         if error:
             return result_number.failure(error)
